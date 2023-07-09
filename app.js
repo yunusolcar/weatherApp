@@ -12,12 +12,13 @@ app.use(express.static("public"));
 
 
 app.get('/', (req, res) => {
-  const apiKey = '72b4b12d20b1cce11fdd6f9e521241cb';
-  const city = 'frankfurt';
+  var apiKey = '72b4b12d20b1cce11fdd6f9e521241cb';
+  var city = req.query.city;
+  const myEncodedUri = encodeURIComponent(city);
   const options = {
     'method': 'GET',
     'hostname': 'api.openweathermap.org',
-    'path': `https://api.openweathermap.org/data/2.5/weather?q=${city}&{}&appid=${apiKey}&lang=tr&units=metric`,
+    'path': `https://api.openweathermap.org/data/2.5/weather?q=${myEncodedUri}&{}&appid=${apiKey}&lang=tr&units=metric`,
     'headers': {},
     'maxRedirects': 20
   };

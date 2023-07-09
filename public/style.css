@@ -1,20 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
+@import "compass/css3";
 
 body {
   background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
-}
-
-#weather_wrapper {
-  width: 400px;
-  margin: 100px auto;
+  font-family: Arial;
 }
 
 .weatherCard {
-  width: 400px;
-  height: 200px;
-  font-family: 'Open Sans';
-  position: relative;
+  display: inline-block;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .currentTemp {
@@ -37,7 +35,7 @@ body {
 }
 
 .temp {
-  font-size: 60px;
+  font-size: 70px;
   text-align: center;
   display: block;
   font-weight: 300;
@@ -46,7 +44,7 @@ body {
 }
 
 .location {
-  color: rgb(255, 255, 255);
+  color: rgb(252, 250, 140);
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
@@ -58,8 +56,9 @@ body {
   color: rgb(255, 255, 255);
   text-align: center;
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 110%;
   display: block;
 }
 
@@ -130,4 +129,11 @@ body {
   /* Yatayda ortala */
   transform: translate(-50%, -50%);
   /* Ortalamayı düzelt */
+}
+
+.form {
+  margin-top: 10%;
+  font-size: 100%;
+  text-align: center;
+  font-weight: 100%;
 }

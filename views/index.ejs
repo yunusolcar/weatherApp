@@ -1,7 +1,13 @@
 <%- include('partials/_header') -%>
 
 <body>
-     <% if (weatherData) { %>
+     <div>
+          <form id="myForm"  class="form" action="/" method="GET">
+               <input type="text" id="city" name="city" placeholder="Şehir giriniz"><br><br>
+               <input type="submit" value="Send">
+          </form>
+     </div>
+     <% if (weatherData.name) { %>
      <div id="weather_wrapper">
           <div class="weatherCard">
                <div class="currentTemp">
@@ -18,8 +24,6 @@
                     </div>
                </div>
           </div>
-          <% } else { %>
-          <p>Hava durumu verisi yüklenemedi.</p>
           <% } %>
      </div>
 
