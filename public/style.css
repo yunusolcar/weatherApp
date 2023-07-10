@@ -8,7 +8,6 @@ body {
   align-items: center;
   text-align: center;
   height: 100vh;
-
   background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
   font-family: Arial;
   margin: 0;
@@ -137,68 +136,3 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-/*
---------
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
-
-    #myForm {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    #weather_wrapper {
-        text-align: center;
-    }
-
-    .weatherCard {
-        display: inline-block;
-        background-color: #f2f2f2;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-
-    .currentTemp {
-        font-size: 48px;
-        font-weight: bold;
-    }
-
-    .location {
-        font-size: 24px;
-        font-weight: bold;
-    }
-
-    .altlocation {
-        font-size: 18px;
-        color: gray;
-    }
-
-    .currentWeather {
-        display: flex;
-        align-items: center;
-        margin-top: 20px;
-    }
-
-    .conditions {
-        font-size: 48px;
-        margin-right: 10px;
-    }
-
-    .info {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .rain,
-    .wind {
-        font-size: 18px;
-        margin-bottom: 5px;
-    }
-</style>
