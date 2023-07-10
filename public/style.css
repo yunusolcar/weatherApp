@@ -3,14 +3,19 @@
 @import "compass/css3";
 
 body {
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100vh;
+
   background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
   font-family: Arial;
   margin: 0;
+  padding: 0;
 }
 
 .form {
@@ -135,4 +140,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    width: 100%;
+  }
 }
