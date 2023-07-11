@@ -1,0 +1,280 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
+@import "compass/css3";
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+
+#myForm {
+  margin-top: -250px;
+
+}
+
+#city {
+  border-radius: 10px;
+  width: 400px;
+  height: 20px;
+  text-align: center;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 10px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  background-color: #348AC7;
+  color: #ffffff;
+  border-radius: 4px;
+  border: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #7d887e;
+}
+
+.form {
+  margin-top: -120px;
+}
+
+.weatherCard {
+  display: inline-block;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.currentTemp {
+  width: 220px;
+  height: 200px;
+  background: rgb(41, 41, 41);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.currentWeather {
+  width: 180px;
+  height: 200px;
+  background: rgb(237, 237, 237);
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.temp {
+  font-size: 70px;
+  text-align: center;
+  display: block;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  padding: 20px 0 0;
+}
+
+.location {
+  color: rgb(252, 250, 140);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 30px;
+  display: block;
+}
+
+.altlocation {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 110%;
+  display: block;
+}
+
+.conditions {
+  font-family: weathericons;
+  font-size: 80px;
+  display: block;
+  padding: 20px 0 0;
+  text-align: center;
+}
+
+.info {
+  width: 180px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgb(42, 178, 234);
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.rain {
+  width: 50%;
+  position: absolute;
+  left: 10px;
+  word-spacing: 60px;
+  top: 3px;
+}
+
+.rain::before {
+  display: block;
+  content: '\f04e';
+  font-family: weathericons;
+  font-size: 40px;
+  left: 6px;
+  top: -4px;
+  position: absolute;
+}
+
+.wind {
+  width: 45%;
+  right: -10px;
+  position: absolute;
+  word-spacing: 50px;
+  top: 3px;
+}
+
+.wind::before {
+  display: block;
+  content: '\f050';
+  font-family: weathericons;
+  font-size: 20px;
+  left: -15px;
+  position: absolute;
+  top: 5px;
+}
+
+#weather_wrapper {
+  width: 400px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    width: 100%;
+  }
+}
+
+body {
+     font-family: Arial, sans-serif;
+     background-color: red;
+     background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
+     height: calc(100vh - 72px);
+   }
+   
+   .container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: calc(100vh - 72px);
+   }
+   
+   .form {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     margin-bottom: 20px;
+   }
+   
+   .temp {
+     font-size: 70px;
+     text-align: center;
+     display: block;
+     font-weight: 300;
+     color: rgb(255, 255, 255);
+     padding: 20px 0 0;
+   }
+   
+   .location {
+     color: rgb(252, 250, 140);
+     text-transform: uppercase;
+     font-weight: 700;
+     font-size: 30px;
+   }
+   
+   .block {
+     width: 100px;
+     height: 10px;
+     margin: 10px;
+     background-color: #F0F0F0;
+   }
+   
+   .block-a {
+     display: flex;
+     flex-direction: row;
+     width: 200px;
+     height: 200px;
+     background: rgb(41, 41, 41);
+     border-radius: 10px;
+   
+   }
+   
+   .temp {
+     font-size: 70px;
+   }
+   
+   .button:hover {
+     cursor: pointer;
+   }
+   
+   @media (max-width: 600px) {
+     .form {
+       flex-direction: column;
+       margin-bottom: 10px;
+       margin-top: -20px;
+     }
+   }
+
+   <%- include('partials/_header') -%>
+
+<body>
+     <div class="container">
+          <form id="myForm" class="form" action="/" method="GET">
+               <input type="text" id="city" name="city" placeholder="Şehir giriniz"><br><br>
+               <input type="submit" value="Send" class="button">
+          </form>
+          <% if (weatherData.name) { %>
+          <div class="blocks">
+               <div class="block-a">
+                    <span class="temp"> <%= weatherData.main.temp.toFixed(0) %>&deg;</span>
+                    <span class="location"> <%= weatherData.name %></span>
+                    <span class="altlocation"> <%= weatherData.weather[0].description%></span>
+               </div>
+
+               <div class="block-b">
+                    <span class="conditions">&#xf00d;</span>
+                    <div class="info">
+                         <span class="rain"><%= weatherData.rain%>- MM</span>
+                         <span class="wind"><%= weatherData.wind.speed %> km/h</span>
+                    </div>
+               </div>
+          </div>
+          <% } %>
+     </div>
+</body>
+
+</html>

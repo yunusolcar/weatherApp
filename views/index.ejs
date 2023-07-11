@@ -1,32 +1,95 @@
 <%- include('partials/_header') -%>
 
 <body>
-     <div>
-          <form id="myForm" class="form" action="/" method="GET">
-               <input type="text" id="city" name="city" placeholder="Şehir giriniz"><br><br>
-               <input type="submit" value="Send" class="button">
-          </form>
-     </div>
-     <% if (weatherData.name) { %>
-     <div id="weather_wrapper">
-          <div class="weatherCard">
-               <div class="currentTemp">
-                    <span class="temp"> <%= weatherData.main.temp.toFixed(0) %>&deg;</span>
-                    <span class="location"> <%= weatherData.name %></span>
-                    <span class="altlocation"> <%= weatherData.weather[0].description%></span>
-               </div>
+     <div class="container">
+          <div class="search-box">
+               <i class="fa-solid fa-location-dot"></i>
+               <form action="/" method="GET">
+                    <input type="text" name="city" placeholder="Şehir giriniz">
+                    <button class="fa-solid fa-magnifying-glass" type="submit" value="Send"> </button>
+               </form>
+          </div>
 
-               <div class="currentWeather">
-                    <span class="conditions">&#xf00d;</span>
-                    <div class="info">
-                         <span class="rain"><%= weatherData.rain%>- MM</span>
-                         <span class="wind"><%= weatherData.wind.speed %> km/h</span>
+          <% if (weatherData.name) { %>
+          <div class="weather-box">
+               <% switch (weatherData.weather[0].description) {
+                    case 'açık':
+                         %>
+               <img src="images/clear.png">
+               <%
+                         break;
+
+                    case 'parçalı bulutlu':
+                         %>
+               <img src="images/cloud.png">
+               <%
+                         break;
+
+                    case 'az bulutlu':
+                         %>
+               <img src="images/fewclouds.png">
+               <%
+                         break;
+
+                    case 'yağmurlu':
+                    case 'yer yer hafif yoğunluklu yağış':{
+                         %>
+               <img src="images/rain.png">
+               <%
+                         break;
+                    }
+                    case 'parçalı az bulutlu':
+                         %>
+               <img src="images/cloud.png">
+               <%
+                         break;
+                         
+                    case 'kar yağışlı':
+                         %>
+               <img src="images/snow.png">
+               <%
+                         break;
+                    case 'kapalı' :
+                         %>
+               <img src="images/cloudy.png">
+               <%
+                         break;
+
+                    default:
+
+                         %>
+               <img src="images/404.png">
+               <%
+               } %>
+               <img src="">
+               <p class="location"> <%= weatherData.name %></p>
+               <p class="temp"> <%= weatherData.main.temp.toFixed(0) %></p>
+               <p class="description"> <%= weatherData.weather[0].description%></p>
+          </div>
+
+
+
+          <div class="weather-details">
+               <div class="humidity">
+                    <i class="fa-solid fa-water"></i>
+                    <div class="text">
+                         <span>1.03</span>
+                         <p>Humidity</p>
+                    </div>
+               </div>
+               <div class="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="text">
+                         <span><%= weatherData.wind.speed %> km/h</span>
+                         <p>Wind Speed</p>
                     </div>
                </div>
           </div>
-          <% } %>
      </div>
+     <% } %>
 
+     <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+     <script src="/public/js/index.js"></script>
 </body>
 
 </html>
