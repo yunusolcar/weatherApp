@@ -14,5 +14,5 @@ app.use(express.static("public"));
 app.use('/', pageRoutes);
 
 //Port
-const port = process.env.PORT || 10000;
+const port = process.env.PORT;
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
