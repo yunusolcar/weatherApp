@@ -16,7 +16,7 @@ body {
   align-items: center;
   justify-content: center;
   background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
-  font-family: Arial;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -94,16 +94,15 @@ body {
   font-size: 4rem;
   font-weight: 800;
   margin-top: 20px;
-  margin-left: -16px;
+  margin-left: 16px;
 }
 
 .weather-box .location {
   position: relative;
   color: #06283D;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 800;
   margin-top: 15px;
-  margin-left: -16px;
 }
 
 .weather-box .temp span {
@@ -113,13 +112,16 @@ body {
 }
 
 .weather-box .description {
+  position: relative;
   color: #06283D;
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 20px;
   text-transform: capitalize;
 }
 
 .weather-details {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -146,21 +148,22 @@ body {
 
 .weather-details i {
   color: #06283D;
-  font-size: 26px;
+  font-size: 30px;
   margin-right: 10px;
   margin-top: 6px;
 }
 
 .weather-details span {
   color: #06283D;
-  font-size: 23px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 750;
 }
 
 .weather-details p {
   color: #06283D;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .fadeIn {
@@ -177,7 +180,7 @@ body {
 
 .links i {
   position: fixed;
-  bottom: 20px;
+  bottom:20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;

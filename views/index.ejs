@@ -68,7 +68,7 @@
                <%
                } %>
                <p class="location"> <%= weatherData.name %></p>
-               <p class="temp"> <%= weatherData.main.temp.toFixed(0) %></p>
+               <p class="temp"> <%= weatherData.main.temp.toFixed(0) %>&#176;</p>
                <p class="description"> <%= weatherData.weather[0].description%></p>
           </div>
 
@@ -76,15 +76,15 @@
                <div class="humidity">
                     <i class="fa-solid fa-water"></i>
                     <div class="text">
-                         <span>1.03</span>
-                         <p>Humidity</p>
+                         <span> &#37;<%= weatherData.main.humidity %> </span>
+                         <p>Nem</p>
                     </div>
                </div>
                <div class="wind">
                     <i class="fa-solid fa-wind"></i>
                     <div class="text">
                          <span><%= weatherData.wind.speed %> km/h</span>
-                         <p>Wind Speed</p>
+                         <p>Rüzgar Hızı</p>
                     </div>
                </div>
           </div>
