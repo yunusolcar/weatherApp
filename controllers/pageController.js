@@ -1,5 +1,6 @@
 var https = require('follow-redirects').https;
 require('dotenv').config();
+
 exports.weathers = async (req, res) => {
      city = req.query.city;
      myEncodedUri = encodeURIComponent(city)

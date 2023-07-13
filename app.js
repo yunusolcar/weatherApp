@@ -1,5 +1,6 @@
 const express = require('express')
 var pageRoutes = require('./routes/pageRoute')
+require('dotenv').config();
 
 const app = express()
 
