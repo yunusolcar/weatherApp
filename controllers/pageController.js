@@ -2,7 +2,6 @@ var https = require('follow-redirects').https;
 require('dotenv').config();
 
 exports.weathers = async (req, res) => {
-     API_KEY = '72b4b12d20b1cce11fdd6f9e521241cb'
      city = req.query.city;
      myEncodedUri = encodeURIComponent(city)
      const options = {
